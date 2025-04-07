@@ -1,3 +1,9 @@
+<script setup>
+import { menu } from '@/data/menu.js';
+</script>
+
+
+
 <template>
   <footer class="bg-gray-900 text-white py-12">
     <div class="max-w-7xl mx-auto px-4">
@@ -9,10 +15,12 @@
         <div>
           <h3 class="text-lg font-semibold mb-4">Меню</h3>
           <div class="space-y-2">
-            <a href="/" class="block text-gray-400 hover:text-white transition">Главная</a>
-            <a href="#about" class="block text-gray-400 hover:text-white transition">О нас</a>
-            <a href="#services" class="block text-gray-400 hover:text-white transition">Услуги</a>
-            <a href="#contacts" class="block text-gray-400 hover:text-white transition">Контакты</a>
+            <a v-for="item in menu"
+              :key="item.title"
+              :href="item.href" 
+              class="block text-gray-400 hover:text-white transition">
+              {{ item.title }}
+            </a>
           </div>
         </div>
         <div>
