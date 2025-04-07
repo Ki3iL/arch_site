@@ -50,6 +50,9 @@ const mainServices = [
   }
 ];
 
+console.log('WrenchScrewdriverIcon:', WrenchScrewdriverIcon)
+
+
 const emit = defineEmits(['openModal']);
 
 const openModal = (service) => {

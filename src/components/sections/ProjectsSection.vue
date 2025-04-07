@@ -1,5 +1,21 @@
 <script setup>
-import { projects } from '@/data/projects.js';
+const projects = [
+  {
+    image_name: 'warehouses.png',
+    title: 'Склады',
+    alt: 'Склады'
+  },
+  {
+    image_name: 'nursing_home.png',
+    title: 'Больницы',
+    alt: 'Больницы'
+  },
+  {
+    image_name: 'nursing_home.png',
+    title: 'Мартыновский ДИПИ',
+    alt: 'Мартыновский ДИПИ'
+  }
+];
 
 function getImageUrl(fileName) {
   return new URL(`../../assets/images/projects/${fileName}`, import.meta.url).href;

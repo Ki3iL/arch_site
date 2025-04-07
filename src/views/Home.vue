@@ -1,14 +1,14 @@
 <script setup>
 import { ref } from 'vue';
-import ServiceModal from '../components/ServiceModal.vue';
-import HeroSection from '../components/sections/HeroSection.vue';
-import StatsSection from '../components/sections/StatsSection.vue';
-import AboutSection from '../components/sections/AboutSection.vue';
-import MainServicesSection from '../components/sections/MainServicesSection.vue';
-import DetailedServicesSection from '../components/sections/DetailedServicesSection.vue';
-import AdvantagesSection from '../components/sections/AdvantagesSection.vue';
-import ProjectsSection from '../components/sections/ProjectsSection.vue';
-import ContactSection from '../components/sections/ContactSection.vue';
+import ServiceModal from '@/components/ServiceModal.vue';
+import HeroSection from '@/components/sections/HeroSection.vue';
+import StatsSection from '@/components/sections/StatsSection.vue';
+import AboutSection from '@/components/sections/AboutSection.vue';
+import MainServicesSection from '@/components/sections/MainServicesSection.vue';
+import DetailedServicesSection from '@/components/sections/DetailedServicesSection.vue';
+import AdvantagesSection from '@/components/sections/AdvantagesSection.vue';
+import ProjectsSection from '@/components/sections/ProjectsSection.vue';
+import ContactSection from '@/components/sections/ContactSection.vue';
 
 const selectedService = ref({
   title: '',
