@@ -1,6 +1,10 @@
+<script setup>
+import { address, tel, email_1, email_2, site } from '@/data/contacts.js';
+</script>
+
 <template>
-  <div id="contact" class="py-16">
-    <div class="max-w-7xl mx-auto px-4">
+  <div id="contact" class="py-16 ">
+    <div class="max-w-7xl mx-auto px-4 ">
       <h2 class="text-3xl font-bold mb-12 text-center">КОНТАКТЫ</h2>
       
       <div class="bg-white rounded-lg shadow-lg p-8">
@@ -10,16 +14,20 @@
             <div class="space-y-4 text-gray-700">
               <p>
                 <strong>Адрес:</strong><br>
-                398024, г. Липецк, ул. Доватора 14 офис 311
+                {{ address }}
               </p>
               <p>
                 <strong>Телефон:</strong><br>
-                <a href="tel:+79205121032" class="text-yellow-500">+7 (920) 512-10-32</a>
+                <a :href="`tel:${tel}`" class="text-yellow-500">{{ tel }}</a>
               </p>
               <p>
                 <strong>Email:</strong><br>
-                <a href="mailto:ivs15@rambler.ru" class="text-yellow-500">ivs15@rambler.ru</a><br>
-                <a href="mailto:arhteh@inbox.ru" class="text-yellow-500">arhteh@inbox.ru</a>
+                <a :href="`mailto:${email_1}`" class="text-yellow-500">{{ email_1 }}</a><br>
+                <a :href="`mailto:${email_2}`" class="text-yellow-500">{{ email_2 }}</a>
+              </p>
+              <p>
+                <strong>Сайт:</strong><br>
+                <a :href="site" class="text-yellow-500">{{ site }}</a>
               </p>
             </div>
           </div>
