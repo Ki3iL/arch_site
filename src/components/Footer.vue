@@ -9,10 +9,10 @@
         <div>
           <h3 class="text-lg font-semibold mb-4">Меню</h3>
           <div class="space-y-2">
-            <router-link to="/" class="block text-gray-400 hover:text-white transition">Главная</router-link>
-            <router-link to="/about" class="block text-gray-400 hover:text-white transition">О нас</router-link>
-            <router-link to="/services" class="block text-gray-400 hover:text-white transition">Услуги</router-link>
-            <router-link to="/contacts" class="block text-gray-400 hover:text-white transition">Контакты</router-link>
+            <a href="/" class="block text-gray-400 hover:text-white transition">Главная</a>
+            <a href="#about" class="block text-gray-400 hover:text-white transition">О нас</a>
+            <a href="#services" class="block text-gray-400 hover:text-white transition">Услуги</a>
+            <a href="#contacts" class="block text-gray-400 hover:text-white transition">Контакты</a>
           </div>
         </div>
         <div>

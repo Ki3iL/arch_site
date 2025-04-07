@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import { ref } from 'vue';
 import ServiceModal from '../components/ServiceModal.vue';
 import { 
@@ -9,15 +9,18 @@ import {
   BuildingOfficeIcon,
   SwatchIcon,
   MapIcon,
-  BeakerIcon,
+  LinkIcon,
   ClipboardDocumentCheckIcon,
-  ChartBarIcon
+  ChartBarIcon,
+  UserGroupIcon,
+  ShieldCheckIcon,
+  LightBulbIcon
 } from '@heroicons/vue/24/outline';
 
 const selectedService = ref({
   title: '',
   shortDescription: '',
-  description: [] as string[],
+  description: [],
 });
 
 const isModalOpen = ref(false);
@@ -119,7 +122,7 @@ const detailedServices = [
   },
   {
     title: 'Проектирование строительных конструкций',
-    icon: BeakerIcon,
+    icon: LinkIcon,
     shortDescription: 'Проектирование несущих конструкций любой сложности.',
     description: [
       'Подготовка комплектов чертежей марок КМ, КЖ, КМД, КД',
@@ -156,7 +159,43 @@ const detailedServices = [
   }
 ];
 
-const openModal = (service: { title: string; shortDescription?: string; description: string[] }) => {
+const advantages = [
+  {
+    icon: UserGroupIcon,
+    title: 'Индивидуальный подход',
+    description: 'Каждый проект уникален и требует особого внимания к деталям'
+  },
+  {
+    icon: ShieldCheckIcon,
+    title: 'Гарантия качества',
+    description: 'Строгий контроль на всех этапах проектирования'
+  },
+  {
+    icon: LightBulbIcon,
+    title: 'Современные технологии',
+    description: 'Применение инновационных решений в проектировании'
+  }
+];
+
+const projects = [
+  {
+    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+    title: 'Гостиницы',
+    alt: 'Гостиницы'
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+    title: 'Детские сады',
+    alt: 'Детские сады'
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1527018263374-5adb6a54f01e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+    title: 'АЗС',
+    alt: 'АЗС'
+  }
+];
+
+const openModal = (service) => {
   selectedService.value = service;
   isModalOpen.value = true;
 };
@@ -192,7 +231,7 @@ const openModal = (service: { title: string; shortDescription?: string; descript
           <div class="text-gray-600">КЛИЕНТОВ</div>
         </div>
         <div>
-          <div class="text-4xl font-bold text-yellow-500 mb-2">15+</div>
+          <div class="text-4xl font-bold text-yellow-500 mb-2">20+</div>
           <div class="text-gray-600">ЛЕТ ОПЫТА</div>
         </div>
       </div>
@@ -259,7 +298,7 @@ const openModal = (service: { title: string; shortDescription?: string; descript
               :is="service.icon"
               class="h-12 w-12 text-yellow-500 mb-4"
             />
-            <h3 class="text-lg font-bold mb-2">{{ service.title }}</h3>
+            <h3 class="text-lg font-bold mb-2 md:min-h-[56px]">{{ service.title }}</h3>
             <p class="text-gray-600 text-sm">{{ service.shortDescription }}</p>
             <p class="text-yellow-500 text-sm mt-4">Нажмите для подробной информации →</p>
           </div>
@@ -267,6 +306,52 @@ const openModal = (service: { title: string; shortDescription?: string; descript
       </div>
     </div>
 
+    <!-- Advantages Section -->
+    <div id="advantages" class="py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-12 text-center">НАШИ ПРЕИМУЩЕСТВА</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div 
+            v-for="advantage in advantages" 
+            :key="advantage.title"
+            class="bg-white p-8 rounded-lg shadow-lg text-center"
+          >
+            <component 
+              :is="advantage.icon"
+              class="h-16 w-16 mx-auto mb-6 text-yellow-500"
+            />
+            <h3 class="text-xl font-bold mb-4">{{ advantage.title }}</h3>
+            <p class="text-gray-600">{{ advantage.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div id="projects" class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-12 text-center">НАШИ ПРОЕКТЫ</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div 
+            v-for="project in projects" 
+            :key="project.title"
+            class="relative overflow-hidden rounded-lg group"
+          >
+            <img 
+              :src="project.image" 
+              :alt="project.alt"
+              class="w-full h-64 object-cover"
+            >
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+              <h3 class="text-2xl font-bold text-white">{{ project.title }}</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <!-- Contact Section -->
     <div id="contact" class="py-16">
       <div class="max-w-7xl mx-auto px-4">
@@ -313,3 +398,9 @@ const openModal = (service: { title: string; shortDescription?: string; descript
     />
   </div>
 </template>
+
+<style scoped>
+/* .h--56 {
+  min-height: 56px;
+} */
+</style>

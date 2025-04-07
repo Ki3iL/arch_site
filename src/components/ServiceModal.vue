@@ -1,15 +1,13 @@
-<script setup lang="ts">
+<script setup>
 import { XMarkIcon } from '@heroicons/vue/24/outline';
 
-defineProps<{
-  title: string;
-  description: string[];
-  isOpen: boolean;
-}>();
+defineProps({
+  title: String,
+  description: Array,
+  isOpen: Boolean
+});
 
-defineEmits<{
-  (e: 'close'): void;
-}>();
+defineEmits(['close']);
 </script>
 
 <template>
@@ -43,3 +41,15 @@ defineEmits<{
     </div>
   </div>
 </template>
+
+<style scoped>
+/* Добавляем простую анимацию появления */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fixed {
+  animation: fadeIn 0.3s ease-out;
+}
+</style>
