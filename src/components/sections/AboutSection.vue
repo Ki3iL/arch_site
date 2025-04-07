@@ -22,8 +22,13 @@ const achievements = [
       <h2 class="text-3xl font-bold mb-12 text-center">О КОМПАНИИ</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
         <div class="relative h-full">
-          <img 
+          <!-- <img 
             src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=2089&q=80" 
+            alt="Architecture work" 
+            class="rounded-lg shadow-xl w-full h-full object-cover"
+          > -->
+          <img 
+            src="/about.avif" 
             alt="Architecture work" 
             class="rounded-lg shadow-xl w-full h-full object-cover"
           >
