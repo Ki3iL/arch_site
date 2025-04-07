@@ -17,6 +17,8 @@ import {
   LightBulbIcon
 } from '@heroicons/vue/24/outline';
 
+import { projects } from '@/data/projects.js';
+
 const selectedService = ref({
   title: '',
   shortDescription: '',
@@ -177,28 +179,16 @@ const advantages = [
   }
 ];
 
-const projects = [
-  {
-    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-    title: 'Гостиницы',
-    alt: 'Гостиницы'
-  },
-  {
-    image: 'https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-    title: 'Детские сады',
-    alt: 'Детские сады'
-  },
-  {
-    image: 'https://images.unsplash.com/photo-1527018263374-5adb6a54f01e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-    title: 'АЗС',
-    alt: 'АЗС'
-  }
-];
 
 const openModal = (service) => {
   selectedService.value = service;
   isModalOpen.value = true;
 };
+
+function getImageUrl(fileName) {
+  return new URL(`../assets/images/projects/${fileName}`, import.meta.url).href;
+}
+
 </script>
 
 <template>
@@ -340,7 +330,7 @@ const openModal = (service) => {
             class="relative overflow-hidden rounded-lg group"
           >
             <img 
-              :src="project.image" 
+              :src="getImageUrl(project.image_name)" 
               :alt="project.alt"
               class="w-full h-64 object-cover"
             >
