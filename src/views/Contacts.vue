@@ -1,5 +1,5 @@
 <template>
-  <div class="content-section">
+  <!-- <div class="content-section">
     <h1 class="section-title">Контакты</h1>
 
     <div class="bg-white rounded-lg shadow-md p-8">
@@ -35,5 +35,5 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </template>
