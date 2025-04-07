@@ -26,5 +26,6 @@ const icons = {
   location: defineAsyncComponent(() => import('@/components/icons/contacts/LocationIcon.vue')),
   phone: defineAsyncComponent(() => import('@/components/icons/contacts/PhoneIcon.vue')),
   email: defineAsyncComponent(() => import('@/components/icons/contacts/EmailIcon.vue')),
+  website: defineAsyncComponent(() => import('@/components/icons/contacts/WebsiteIcon.vue')),
 }
 </script> 

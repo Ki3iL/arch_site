@@ -2,6 +2,29 @@
 import { menu } from '@/data/menu.js';
 import { city, street, tel, email_1, email_2, site } from '@/data/contacts.js';
 import BaseIcon from '@/components/icons/BaseIcon.vue';
+
+const contactItems = [
+  {
+    icon: 'phone',
+    text: tel,
+    href: `tel:${tel}`,
+  },
+  {
+    icon: 'email',
+    text: email_1,
+    href: `mailto:${email_1}`,
+  },
+  {
+    icon: 'email',
+    text: email_2,
+    href: `mailto:${email_2}`,
+  },
+  {
+    icon: 'website',
+    text: site,
+    href: site,
+  },
+];
 </script>
 
 <template>
@@ -40,20 +63,19 @@ import BaseIcon from '@/components/icons/BaseIcon.vue';
                 <p>{{street}}</p>
               </div>
             </div>
-            
-            <div class="flex items-center">
-              <BaseIcon name="phone" iconClass="h-5 w-5 mr-3 text-yellow-500" />
-              <a :href="`tel:${tel}`" class="hover:text-yellow-500 transition duration-300">{{ tel }}</a>
-            </div>
-            
-            <div class="flex items-center">
-              <BaseIcon name="email" iconClass="h-5 w-5 mr-3 text-yellow-500" />
-              <a :href="`mailto:${email_1}`" class="hover:text-yellow-500 transition duration-300">{{ email_1 }}</a>
-            </div>
-            
-            <div class="flex items-center">
-              <BaseIcon name="email" iconClass="h-5 w-5 mr-3 text-yellow-500" />
-              <a :href="`mailto:${email_2}`" class="hover:text-yellow-500 transition duration-300">{{ email_2 }}</a>
+
+            <div
+              v-for="item in contactItems"
+              :key="item.text"
+              class="flex items-center"
+            >
+              <BaseIcon :name="item.icon" iconClass="h-5 w-5 mr-3 text-yellow-500" />
+              <a
+                :href="item.href"
+                class="hover:text-yellow-500 transition duration-300"
+              >
+                {{ item.text }}
+              </a>
             </div>
           </div>
         </div>
