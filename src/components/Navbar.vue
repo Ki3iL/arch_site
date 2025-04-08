@@ -1,15 +1,15 @@
 <script setup>
 import { ref } from 'vue';
 import { menu } from '@/data/menu.js';
+import { tel } from '@/data/contacts.js';
 
 const isMenuOpen = ref(false);
-
-const tel = '+7 (920) 512-10-32'
 
 </script>
 
 <template>
   <nav class="bg-gray-900 text-white">
+  <!-- <nav class="fixed top-0 left-0 w-full z-50 bg-gray-900 text-white"> -->
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex justify-between h-20">
         <div class="flex items-center">
