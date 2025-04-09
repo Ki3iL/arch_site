@@ -28,7 +28,7 @@ const achievements = [
             class="rounded-lg shadow-xl w-full h-full object-cover"
           > -->
           <img 
-            src="/about.avif" 
+            src="/images/about.avif" 
             alt="Architecture work" 
             class="rounded-lg shadow-xl w-full h-full object-cover"
           >
@@ -51,7 +51,7 @@ const achievements = [
               <li v-for="achievement in achievements" 
                   :key="achievement" 
                   class="relative pl-5 text-gray-700">
-									<span class="absolute left-0 top-[0.5em] h-2 w-2 bg-yellow-500 rounded-full"/>
+									<span class="absolute left-0 top-[0.55em] h-2 w-2 bg-yellow-500 rounded-full"/>
 									{{ achievement }}
               </li>
             </ul>

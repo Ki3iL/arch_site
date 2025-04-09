@@ -15,21 +15,23 @@ defineEmits(['close']);
     <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
       <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" @click="$emit('close')"></div>
 
-      <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
-        <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-          <div class="sm:flex sm:items-start">
-            <div class="mt-3 text-center sm:mt-0 sm:text-left w-full">
-              <div class="flex justify-between items-center mb-4">
+      <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all my-8 align-middle max-w-lg w-full">
+        <div class="bg-white p-5">
+          <div class="flex items-start">
+            <!-- <div class="mt-3 text-center sm:mt-0 sm:text-left w-full"> -->
+            <div class="mt-3  w-full">
+              <div class="flex justify-between items-center mb-4 relative ">
                 <h3 class="text-2xl leading-6 font-bold text-gray-900" id="modal-title">
                   {{ title }}
                 </h3>
-                <button @click="$emit('close')" class="text-gray-400 hover:text-gray-500">
+                <button @click="$emit('close')" class="absolute -right-2 -top-5 text-gray-400 hover:text-gray-500">
                   <XMarkIcon class="h-6 w-6" />
                 </button>
               </div>
               <div class="mt-4">
                 <ul class="space-y-2">
-                  <li v-for="(item, index) in description" :key="index" class="text-gray-700">
+                  <li v-for="(item, index) in description" :key="index" class="relative pl-5 text-gray-700">
+                    <span class="absolute left-0 top-[0.55em] h-2 w-2 bg-yellow-500 rounded-full"/>
                     {{ item }}
                   </li>
                 </ul>
