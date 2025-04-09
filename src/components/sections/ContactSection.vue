@@ -10,7 +10,7 @@ import YandexMap from '@/components/YandexMap.vue';
       
       <div class="bg-white rounded-lg shadow-lg p-8">
         <!-- Контакты и карта -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 ">
           <!-- Контакты -->
           <div>
             <h3 class="text-2xl font-bold mb-4">Наши контакты</h3>
@@ -42,10 +42,10 @@ import YandexMap from '@/components/YandexMap.vue';
         </div>
         
         <!-- Важная информация (на всю ширину) -->
-        <div class="border-t border-gray-200 pt-8">
+        <div class="border-t border-gray-200 indent-5 pt-8">
           <h3 class="text-2xl font-bold mb-4">Важная информация</h3>
-          <p class="text-gray-700">
-            Обращаем внимание уважаемых клиентов на то, что высокая ответственность за качество выполняемых работ требуют от сотрудников и руководства ООО «Архтехпроект», периодического присутствия на строящихся объектах. В связи с этим желательно время встречи в офисе согласовывать предварительно.
+          <p class="text-justify text-gray-700">
+            Обращаем внимание уважаемых клиентов на то, что высокая ответственность за качество выполняемых работ требуют от сотрудников и руководства ООО&nbsp;«Архтехпроект», периодического присутствия на строящихся объектах. В связи с этим желательно время встречи в офисе согласовывать предварительно.
           </p>
         </div>
       </div>

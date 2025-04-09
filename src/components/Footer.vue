@@ -40,7 +40,7 @@ const contactItems = [
         </div>
         
         <!-- Меню -->
-        <div class="space-y-4">
+        <div class="space-y-4 md:text-center">
           <h3 class="text-xl font-semibold text-white">Навигация</h3>
           <div class="space-y-2">
             <a v-for="item in menu"

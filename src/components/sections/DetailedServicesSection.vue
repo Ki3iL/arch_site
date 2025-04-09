@@ -114,7 +114,7 @@ const openModal = (service) => {
         <div 
           v-for="service in detailedServices" 
           :key="service.title"
-          class="bg-white p-6 rounded-lg shadow-lg cursor-pointer hover:shadow-xl transition-shadow"
+          class="bg-white p-6 rounded-lg shadow-lg cursor-pointer hover:shadow-xl transition-shadow "
           @click="openModal(service)"
         >
           <component 
