@@ -2,13 +2,44 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>АрхТехПроект</title>
+    
+    <title>АрхТехПроект — Проектно-строительная компания в Липецке</title>
+    <meta name="description" content="Проектно-строительная компания АрхТехПроект: архитектурное проектирование, сметная документация, обследование зданий, энергоаудит, авторский надзор. Работаем по Липецку и России." />
+    <meta name="keywords" content="архитектурное проектирование, строительная документация, энергоаудит, обследование зданий, авторский надзор, АрхТехПроект Липецк" />
+    <meta name="author" content="ООО АрхТехПроект" />
+    <meta property="og:title" content="АрхТехПроект — Проектно-строительная компания" />
+    <meta property="og:description" content="Комплексное проектирование, сметная документация, обследование зданий, авторский и технический надзор. Липецк и регионы России." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.arhtehproekt.ru" />
+    <meta property="og:image" content="/preview.jpg" />
+
+    <link rel="canonical" href="https://www.arhtehproekt.ru/" />
   </head>
   <body>
     <div id="app"></div>
+
+    <!-- Yandex Maps -->
     <script type="module" src="/src/main.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <!-- Структурированные данные Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "АрхТехПроект",
+        "url": "https://www.arhtehproekt.netlify.app",
+        "email": "arhteh@inbox.ru",
+        "telephone": "+7-920-512-10-32",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ул. Доватора 14, офис 311",
+          "addressLocality": "Липецк",
+          "postalCode": "398024",
+          "addressCountry": "RU"
+        }
+      }
+      </script>
   </body>
 </html>

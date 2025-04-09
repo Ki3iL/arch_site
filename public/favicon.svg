@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64">
+  <!-- Круглый тёмно-серый фон -->
+  <circle cx="32" cy="32" r="32" fill="#111827" />
+  
+  <!-- Жирная буква A по центру -->
+  <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle"
+        font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#eab308">
+    A
+  </text>
+</svg>
