@@ -30,7 +30,7 @@ import YandexMap from '@/components/YandexMap.vue';
               </p>
               <p>
                 <strong>Сайт:</strong><br>
-                <a :href="site" class="text-yellow-500">{{ site }}</a>
+                <a :href="`https://${site}`" class="text-yellow-500">{{ site }}</a>
               </p>
             </div>
           </div>

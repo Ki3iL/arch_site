@@ -22,7 +22,7 @@ const contactItems = [
   {
     icon: 'website',
     text: site,
-    href: site,
+    href: `https://${site}`,
   },
 ];
 </script>
