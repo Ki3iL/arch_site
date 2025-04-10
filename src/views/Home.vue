@@ -12,7 +12,7 @@ import ContactSection from '@/components/sections/ContactSection.vue';
 
 const selectedService = ref({
   title: '',
-  title_description: '',
+  titleDescription: '',
   shortDescription: '',
   description: [],
 });
@@ -39,7 +39,7 @@ const openModal = (service) => {
     <!-- Modal -->
     <ServiceModal
       :title="selectedService.title"
-      :title_description="selectedService.title_description"
+      :titleDescription="selectedService.titleDescription"
       :description="selectedService.description"
       :is-open="isModalOpen"
       @close="isModalOpen = false"
