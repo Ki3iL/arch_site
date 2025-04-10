@@ -1,5 +1,5 @@
 /**
- * Плавная прокрутка к элементу по ID
+ * Плавно прокручивает страницу к элементу по его ID
  * @param {string} id - ID элемента, к которому нужно прокрутить
  * @param {number} offset - Отступ от верха страницы (для учета фиксированного меню)
  */
@@ -17,23 +17,16 @@ export function scrollToElement(id, offset = 80) {
 }
 
 /**
- * Инициализация плавной прокрутки для всех внутренних ссылок с якорями
+ * Инициализирует плавную прокрутку для всех внутренних ссылок с якорями
  * @param {number} offset - Отступ от верха страницы (для учета фиксированного меню)
  */
 export function initSmoothScroll(offset = 80) {
-  document.addEventListener('DOMContentLoaded', () => {
-    const links = document.querySelectorAll('a[href^="#"]');
-    
-    links.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        
-        const href = link.getAttribute('href');
-        if (href === '#') return;
-        
-        const id = href.substring(1);
-        scrollToElement(id, offset);
-      });
-    });
+  document.addEventListener('click', (e) => {
+    const target = e.target.closest('a');
+    if (target && target.hash) {
+      e.preventDefault();
+      const id = target.hash.slice(1);
+      scrollToElement(id, offset);
+    }
   });
 } 
