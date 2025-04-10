@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, inject } from 'vue';
 import ServiceModal from '@/components/ServiceModal.vue';
 import HeroSection from '@/components/sections/HeroSection.vue';
 import StatsSection from '@/components/sections/StatsSection.vue';
@@ -18,10 +18,12 @@ const selectedService = ref({
 });
 
 const isModalOpen = ref(false);
+const openModalProvider = inject('openModal');
 
 const openModal = (service) => {
   selectedService.value = service;
   isModalOpen.value = true;
+  openModalProvider();
 };
 </script>
 

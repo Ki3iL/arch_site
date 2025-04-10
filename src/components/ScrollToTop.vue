@@ -1,7 +1,7 @@
 <template>
   <Transition name="slide-fade">
     <button
-      v-show="isVisible"
+      v-show="isVisible && !isModalOpen"
       @click="scrollToTop"
       class="fixed bottom-8 right-8 bg-yellow-500 text-white p-3 rounded-full shadow-lg hover:bg-yellow-600 transition-all duration-300 z-50"
       aria-label="Прокрутить вверх"
@@ -14,10 +14,11 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, inject } from 'vue'
 
 const isVisible = ref(false)
 const scrollThreshold = 300 // Порог показа кнопки
+const isModalOpen = inject('isModalOpen', ref(false)) // Получаем состояние модального окна из провайдера
 
 const checkScrollPosition = () => {
   isVisible.value = window.scrollY > scrollThreshold
