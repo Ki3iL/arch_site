@@ -7,11 +7,18 @@ import { scrollToElement } from '@/utils/scroll.js';
 const isMenuOpen = ref(false);
 
 const handleNavClick = (e, href) => {
-  if (href.startsWith('#')) {
+  if (href === '#') {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+    isMenuOpen.value = false;
+  } else if (href.startsWith('#')) {
     e.preventDefault();
     const id = href.slice(1);
     scrollToElement(id, 80);
-    isMenuOpen.value = false; // Закрываем мобильное меню после клика
+    isMenuOpen.value = false;
   }
 };
 </script>
