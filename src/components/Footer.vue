@@ -45,7 +45,7 @@ const handleNavClick = (e, href) => {
       <div class="grid gap-12 md:grid-cols-3">
         <!-- Блок "О компании" -->
         <div class="space-y-4">
-          <a href="#" @click="handleNavClick($event, '#')" class="flex items-center space-x-4">
+          <a href="#" @click="handleNavClick($event, '#')" class="flex items-center space-x-2">
             <BaseIcon name="logo" size="2xl" color="yellow-500" />
             <span class="text-4xl font-sofia text-yellow-500 relative top-[5px]">АРХТЕХПРОЕКТ</span>
           </a>
@@ -103,7 +103,7 @@ const handleNavClick = (e, href) => {
       <!-- Разделитель и копирайт -->
       <div class="mt-12 border-t border-gray-800 pt-6 text-center text-sm text-gray-500">
         <p>
-          &copy; {{ new Date().getFullYear() }} <span class="text-yellow-500 font-semibold">АрхТехПроект</span>.
+          &copy; {{ new Date().getFullYear() }} <span class="font-sofia text-yellow-500 font-semibold">АРХТЕХПРОЕКТ</span>.
           Все права защищены.
         </p>
       </div>

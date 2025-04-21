@@ -3,7 +3,7 @@ import { ref } from 'vue';
 import { menu } from '@/data/menu.js';
 import { tel } from '@/data/contacts.js';
 import { scrollToElement } from '@/utils/scroll.js';
-import BaseIcon from '@/components/BaseIcon.vue';
+import BaseIcon from '@/components/icons/BaseIcon.vue';
 
 const isMenuOpen = ref(false);
 
@@ -29,9 +29,9 @@ const handleNavClick = (e, href) => {
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex justify-between h-20">
         <div class="flex items-center">
-          <a href="#" class="flex items-center space-x-4" @click="handleNavClick($event, '#')">
+          <a href="#" class="flex items-center space-x-2" @click="handleNavClick($event, '#')">
             <BaseIcon name="logo" size="2xl" color="yellow-500" />
-            <span class="text-3xl font-sofia text-yellow-500">АРХТЕХПРОЕКТ</span>
+            <span class="text-4xl font-sofia text-yellow-500 relative top-[5px]">АРХТЕХПРОЕКТ</span>
           </a>
         </div>
         

@@ -2,7 +2,7 @@
   <component
     :is="icons[name]"
     v-bind="attrs"
-    :class="[iconClass, sizeClass, colorClass]"
+    :class="[iconClass, sizeClass]"
   />
 </template>
 
@@ -22,10 +22,10 @@ const props = defineProps({
     type: String,
     default: 'md',
   },
-  color: {
-    type: String,
-    default: 'current',
-  },
+  // color: {
+  //   type: String,
+  //   default: 'current',
+  // },
 })
 
 const attrs = useAttrs()
@@ -42,10 +42,10 @@ const sizeClass = computed(() => {
   return sizes[props.size] || sizes.md
 })
 
-const colorClass = computed(() => {
-  if (props.color === 'current') return 'text-current'
-  return `text-${props.color}`
-})
+// const colorClass = computed(() => {
+//   if (props.color === 'current') return 'text-current'
+//   return `text-${props.color}`
+// })
 
 const icons = {
   logo: defineAsyncComponent(() => import('@/components/icons/LogoIcon.vue')),
