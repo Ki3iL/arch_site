@@ -7,7 +7,12 @@
 </template>
 
 <script setup>
-import { defineAsyncComponent, useAttrs, computed } from 'vue'
+import { useAttrs, computed } from 'vue'
+import LogoIcon from '@/components/icons/LogoIcon.vue'
+import LocationIcon from '@/components/icons/contacts/LocationIcon.vue'
+import PhoneIcon from '@/components/icons/contacts/PhoneIcon.vue'
+import EmailIcon from '@/components/icons/contacts/EmailIcon.vue'
+import WebsiteIcon from '@/components/icons/contacts/WebsiteIcon.vue'
 
 const props = defineProps({
   name: {
@@ -49,10 +54,10 @@ const colorClass = computed(() => {
 })
 
 const icons = {
-  logo: defineAsyncComponent(() => import('@/components/icons/LogoIcon.vue')),
-  location: defineAsyncComponent(() => import('@/components/icons/contacts/LocationIcon.vue')),
-  phone: defineAsyncComponent(() => import('@/components/icons/contacts/PhoneIcon.vue')),
-  email: defineAsyncComponent(() => import('@/components/icons/contacts/EmailIcon.vue')),
-  website: defineAsyncComponent(() => import('@/components/icons/contacts/WebsiteIcon.vue')),
+  logo: LogoIcon,
+  location: LocationIcon,
+  phone: PhoneIcon,
+  email: EmailIcon,
+  website: WebsiteIcon,
 }
 </script> 
