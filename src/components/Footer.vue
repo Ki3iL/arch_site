@@ -45,14 +45,17 @@ const handleNavClick = (e, href) => {
       <div class="grid gap-12 md:grid-cols-3">
         <!-- Блок "О компании" -->
         <div class="space-y-4">
-          <h3 class="text-2xl font-bold text-yellow-500">АрхТехПроект</h3>
+          <a href="#" @click="handleNavClick($event, '#')" class="flex items-center space-x-2">
+            <BaseIcon name="logo" size="2xl" color="yellow-500" />
+            <span class="text-4xl font-sofia text-yellow-500 relative top-[5px]">АРХТЕХПРОЕКТ</span>
+          </a>
           <p class="text-gray-400 text-sm leading-relaxed">
             Архитектурное проектирование и строительство с гарантией качества и индивидуальным подходом.
           </p>
         </div>
 
         <!-- Блок "Навигация" -->
-        <nav class="space-y-4">
+        <nav class="space-y-4 text-center">
           <h3 class="text-xl font-semibold">Навигация</h3>
           <ul class="space-y-2">
             <li v-for="item in menu" :key="item.title">
@@ -71,7 +74,7 @@ const handleNavClick = (e, href) => {
         <div class="space-y-4">
           <h3 class="text-xl font-semibold">Контакты</h3>
           <div class="flex items-start space-x-3">
-            <BaseIcon name="location" class="w-5 h-5 text-yellow-500 mt-1" />
+            <BaseIcon name="location" class="w-5 h-5 mt-1" color="yellow-500" />
             <div>
               <p v-if="city" class="text-gray-400">{{ city }}</p>
               <p v-if="street" class="text-gray-400">{{ street }}</p>
@@ -83,7 +86,7 @@ const handleNavClick = (e, href) => {
               :key="item.text"
               class="flex items-center space-x-3"
             >
-              <BaseIcon :name="item.icon" class="w-5 h-5 text-yellow-500" />
+              <BaseIcon :name="item.icon" class="w-5 h-5" color="yellow-500" />
               <a
                 :href="item.href"
                 target="_blank"
@@ -100,7 +103,7 @@ const handleNavClick = (e, href) => {
       <!-- Разделитель и копирайт -->
       <div class="mt-12 border-t border-gray-800 pt-6 text-center text-sm text-gray-500">
         <p>
-          &copy; {{ new Date().getFullYear() }} <span class="text-yellow-500 font-semibold">АрхТехПроект</span>.
+          &copy; {{ new Date().getFullYear() }} <span class="font-sofia text-yellow-500 font-semibold">АРХТЕХПРОЕКТ</span>.
           Все права защищены.
         </p>
       </div>

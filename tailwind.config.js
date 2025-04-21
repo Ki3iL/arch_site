@@ -9,6 +9,9 @@ export default {
       screens: {
         'cm': '900px',
       },
+      fontFamily: {
+        sofia: ['SofiaSansExtraCondensed', 'sans-serif'],
+      },
     },
   },
   plugins: [],

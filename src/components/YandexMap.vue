@@ -30,12 +30,12 @@ onMounted(() => {
         coords,
         {
           balloonContent: `
-            <strong>Архтехпроект</strong><br>
+            <strong>АРХТЕХПРОЕКТ</strong><br>
             <a href="https://yandex.ru/maps/org/arkhtekhproyekt/28603401219/" target="_blank">
               Посмотреть на Яндекс.Картах
             </a>
           `,
-          hintContent: 'Архтехпроект',
+          hintContent: 'АРХТЕХПРОЕКТ',
         },
         {
           preset: 'islands#redIcon',
