@@ -10,7 +10,8 @@ export default {
         'cm': '900px',
       },
       fontFamily: {
-        sofia: ['SofiaSansExtraCondensed', 'sans-serif'],
+        sofia: ['SofiaSansCondensed', 'sans-serif'],
+        // sofia: ['SofiaSansExtraCondensed', 'sans-serif'],
       },
     },
   },

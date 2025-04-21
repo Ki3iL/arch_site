@@ -103,8 +103,7 @@ const handleNavClick = (e, href) => {
       <!-- Разделитель и копирайт -->
       <div class="mt-12 border-t border-gray-800 pt-6 text-center text-sm text-gray-500">
         <p>
-          &copy; {{ new Date().getFullYear() }} <span class="font-sofia text-yellow-500 font-semibold">АРХТЕХПРОЕКТ</span>.
-          Все права защищены.
+          &copy; {{ new Date().getFullYear() }} ООО «АРХТЕХПРОЕКТ». Все права защищены.
         </p>
       </div>
     </div>

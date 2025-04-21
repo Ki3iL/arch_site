@@ -1,10 +1,19 @@
 @font-face {
   font-family: 'SofiaSansExtraCondensed';
-  src: url('/fonts/SofiaSansExtraCondensed-Bold.ttf') format('truetype');
+  src: url('/fonts/SofiaSansExtraCondensed-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: fallback;
+  unicode-range: U+000-5FF, U+400-4FF; /* латиница + кириллица */
+}
+
+@font-face {
+  font-family: 'SofiaSansCondensed';
+  src: url('/fonts/SofiaSansCondensed-Bold.woff2') format('woff2'),
+       url('/fonts/SofiaSansCondensed-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
-  unicode-range: U+000-5FF, U+400-4FF; /* латиница + кириллица */
 }
 
 @tailwind base;
