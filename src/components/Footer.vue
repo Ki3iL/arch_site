@@ -46,12 +46,8 @@ const handleNavClick = (e, href) => {
         <!-- Блок "О компании" -->
         <div class="space-y-4">
           <a href="#" @click="handleNavClick($event, '#')" class="flex items-center space-x-4">
-            <svg width="40" height="40" viewBox="0 0 208 168" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-yellow-500">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M46.8497 167.723H0L103.57 0.416016L126.995 38.256L46.8497 167.723Z" fill="currentColor"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M112.94 91.2334L160.291 167.723H207.14L136.365 53.3921L112.94 91.2334Z" fill="currentColor"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M65.5898 167.723L90.2494 127.888H116.892L141.551 167.723H65.5898Z" fill="currentColor"/>
-            </svg>
-            <span class="text-3xl font-sofia text-yellow-500">АРХТЕХПРОЕКТ</span>
+            <BaseIcon name="logo" size="2xl" color="yellow-500" />
+            <span class="text-4xl font-sofia text-yellow-500 relative top-[5px]">АРХТЕХПРОЕКТ</span>
           </a>
           <p class="text-gray-400 text-sm leading-relaxed">
             Архитектурное проектирование и строительство с гарантией качества и индивидуальным подходом.
