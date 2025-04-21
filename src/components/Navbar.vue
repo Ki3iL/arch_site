@@ -28,8 +28,13 @@ const handleNavClick = (e, href) => {
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex justify-between h-20">
         <div class="flex items-center">
-          <a href="#" class="flex items-center" @click="handleNavClick($event, '#')">
-            <span class="text-2xl font-bold text-yellow-500">АрхТехПроект</span>
+          <a href="#" class="flex space-x-2" @click="handleNavClick($event, '#')">
+            <svg width="40" height="40" viewBox="0 0 208 168" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-yellow-500">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M46.8497 167.723H0L103.57 0.416016L126.995 38.256L46.8497 167.723Z" fill="currentColor"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M112.94 91.2334L160.291 167.723H207.14L136.365 53.3921L112.94 91.2334Z" fill="currentColor"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M65.5898 167.723L90.2494 127.888H116.892L141.551 167.723H65.5898Z" fill="currentColor"/>
+            </svg>
+            <span class="text-4xl font-sofia text-yellow-500 relative top-[5px]">АРХТЕХПРОЕКТ</span>
           </a>
         </div>
         
