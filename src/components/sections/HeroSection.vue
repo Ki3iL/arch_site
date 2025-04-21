@@ -7,7 +7,7 @@
     </div>
     <div class="relative max-w-7xl mx-auto px-4">
       <div class="flex items-center space-x-2 mb-6">
-        <BaseIcon name="logo" size="3xl" color="white" />
+        <!-- <BaseIcon name="logo" size="3xl" color="white" /> -->
         <h1 class="text-6xl font-sofia relative top-[6px]">АРХТЕХПРОЕКТ</h1>
       </div>
       <p class="text-xl mb-8">Ваш надежный партнер в проектировании и строительстве</p>

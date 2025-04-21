@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       screens: {
-        'cm': '900px',
+        'cm': '935px',
       },
       fontFamily: {
         sofia: ['SofiaSansCondensed', 'sans-serif'],

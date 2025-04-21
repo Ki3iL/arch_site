@@ -42,21 +42,21 @@ const handleNavClick = (e, href) => {
 <template>
   <footer class="bg-gray-900 text-white pt-16 pb-8">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="grid gap-12 md:grid-cols-3">
-        <!-- Блок "О компании" -->
-        <div class="space-y-4">
-          <a href="#" @click="handleNavClick($event, '#')" class="flex items-center space-x-2">
-            <BaseIcon name="logo" size="2xl" color="yellow-500" />
-            <span class="text-4xl font-sofia text-yellow-500 relative top-[5px]">АРХТЕХПРОЕКТ</span>
-          </a>
-          <p class="text-gray-400 text-sm leading-relaxed">
-            Архитектурное проектирование и строительство с гарантией качества и индивидуальным подходом.
-          </p>
-        </div>
+      <div class="grid gap-12 cm:grid-cols-3">
+  <!-- Блок "О компании" -->
+  <div class="space-y-4 w-full md:max-w-sm lg:max-w-xs">
+    <a href="#" @click="handleNavClick($event, '#')" class="flex items-center space-x-2">
+      <BaseIcon name="logo" size="2xl" color="yellow-500" />
+      <span class="text-4xl font-sofia text-yellow-500 relative top-[5px]">АРХТЕХПРОЕКТ</span>
+    </a>
+    <p class="text-gray-400 text-sm leading-relaxed">
+      Профессиональное проектирование объектов различной сложности с индивидуальным подходом к каждому проекту.
+    </p>
+  </div>
 
         <!-- Блок "Навигация" -->
-        <nav class="space-y-4 text-center">
-          <h3 class="text-xl font-semibold">Навигация</h3>
+        <nav class="space-y-4">
+          <h3 class="text-xl font-semibold text-yellow-500">Разделы сайта</h3>
           <ul class="space-y-2">
             <li v-for="item in menu" :key="item.title">
               <a
@@ -72,7 +72,7 @@ const handleNavClick = (e, href) => {
 
         <!-- Блок "Контакты" -->
         <div class="space-y-4">
-          <h3 class="text-xl font-semibold">Контакты</h3>
+          <h3 class="text-xl font-semibold text-yellow-500">Контакты</h3>
           <div class="flex items-start space-x-3">
             <BaseIcon name="location" class="w-5 h-5 mt-1" color="yellow-500" />
             <div>
