@@ -55,7 +55,7 @@ const handleNavClick = (e, href) => {
         </div>
 
         <!-- Блок "Навигация" -->
-        <nav class="space-y-4">
+        <nav class="space-y-4 text-center">
           <h3 class="text-xl font-semibold">Навигация</h3>
           <ul class="space-y-2">
             <li v-for="item in menu" :key="item.title">
@@ -74,7 +74,7 @@ const handleNavClick = (e, href) => {
         <div class="space-y-4">
           <h3 class="text-xl font-semibold">Контакты</h3>
           <div class="flex items-start space-x-3">
-            <BaseIcon name="location" class="w-5 h-5 text-yellow-500 mt-1" />
+            <BaseIcon name="location" class="w-5 h-5 mt-1" color="yellow-500" />
             <div>
               <p v-if="city" class="text-gray-400">{{ city }}</p>
               <p v-if="street" class="text-gray-400">{{ street }}</p>
@@ -86,7 +86,7 @@ const handleNavClick = (e, href) => {
               :key="item.text"
               class="flex items-center space-x-3"
             >
-              <BaseIcon :name="item.icon" class="w-5 h-5 text-yellow-500" />
+              <BaseIcon :name="item.icon" class="w-5 h-5" color="yellow-500" />
               <a
                 :href="item.href"
                 target="_blank"
