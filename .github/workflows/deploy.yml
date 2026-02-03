@@ -1,32 +1,86 @@
-name: Deploy to GitHub Pages
+# name: Deploy to GitHub Pages
+
+# on:
+#   push:
+#     branches:
+#       - dev
+#       # - stop
+
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v3
+
+#       - name: Setup Node.js
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: 18
+
+#       - name: Install dependencies
+#         run: npm install
+
+#       - name: Build the project
+#         run: npm run build
+
+#       - name: Deploy to GitHub Pages
+#         uses: peaceiris/actions-gh-pages@v3
+#         with:
+#           github_token: ${{ secrets.GITHUB_TOKEN }}
+#           publish_dir: ./dist
+
+name: Deploy to GitHub Pages (main + dev)
 
 on:
   push:
     branches:
-      # - main
-      - stop
+      - main
+      - dev
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
+          cache: npm
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install
+        run: npm ci
 
-      - name: Build the project
+      - name: Set base & destination
+        run: |
+          if [ "${GITHUB_REF_NAME}" = "main" ]; then
+            echo "VITE_BASE=/arch_site/" >> $GITHUB_ENV
+            echo "DEST_DIR=." >> $GITHUB_ENV
+          else
+            echo "VITE_BASE=/arch_site/dev/" >> $GITHUB_ENV
+            echo "DEST_DIR=dev" >> $GITHUB_ENV
+          fi
+
+      - name: Build
+        env:
+          VITE_BASE: ${{ env.VITE_BASE }}
         run: npm run build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ github.token }}
           publish_dir: ./dist
+          destination_dir: ${{ env.DEST_DIR }}
+          keep_files: true
