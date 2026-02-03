@@ -1,7 +1,7 @@
 <template>
   <div class="relative bg-gray-900 text-white py-32">
     <div class="absolute inset-0">
-      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80" 
+      <img src="/images/hero.avif" 
           alt="Architecture" 
           class="w-full h-full object-cover opacity-30">
     </div>
