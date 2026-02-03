@@ -1,10 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64">
-  <!-- Круглый тёмно-серый фон -->
-  <circle cx="32" cy="32" r="32" fill="#111827" />
-  
-  <!-- Жирная буква A по центру -->
-  <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle"
-        font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#eab308">
-    A
-  </text>
+<svg width="208" height="168" viewBox="0 0 208 168" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M46.8497 167.723H0L103.57 0.416016L126.995 38.256L46.8497 167.723Z" fill="#EAB308"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M112.94 91.2334L160.291 167.723H207.14L136.365 53.3921L112.94 91.2334Z" fill="#EAB308"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M65.5898 167.723L90.2494 127.888H116.892L141.551 167.723H65.5898Z" fill="#EAB308"/>
 </svg>
