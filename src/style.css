@@ -1,17 +1,18 @@
 @font-face {
-  font-family: 'SofiaSansExtraCondensed';
-  src: url('/fonts/SofiaSansExtraCondensed-Bold.woff2') format('woff2');
-  font-weight: bold;
+  font-family: 'Sofia Sans Extra Condensed';
+  src: url("/fonts/sofia-sans-extra-condensed/SofiaSansExtraCondensed-Bold.woff2") format("woff2"),
+       url("/fonts/sofia-sans-extra-condensed/SofiaSansExtraCondensed-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
   unicode-range: U+000-5FF, U+400-4FF; /* латиница + кириллица */
 }
 
 @font-face {
-  font-family: 'SofiaSansCondensed';
-  src: url('/fonts/SofiaSansCondensed-Bold.woff2') format('woff2'),
-       url('/fonts/SofiaSansCondensed-Bold.woff') format('woff');
-  font-weight: bold;
+  font-family: 'Sofia Sans Condensed';
+  src: url("/fonts/sofia-sans-condensed/SofiaSansCondensed-Bold.woff2") format("woff2"),
+       url("/fonts/sofia-sans-condensed/SofiaSansCondensed-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
