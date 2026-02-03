@@ -75,6 +75,7 @@ jobs:
       - name: Build
         env:
           VITE_BASE: ${{ env.VITE_BASE }}
+          VITE_YMAPS_KEY: ${{ secrets.VITE_YMAPS_KEY }}
         run: npm run build
 
       - name: Deploy
