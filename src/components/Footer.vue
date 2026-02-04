@@ -109,3 +109,10 @@ const handleNavClick = (e, href) => {
     </div>
   </footer>
 </template>
+
+
+<style>
+
+footer { transform: translateZ(0); }
+
+</style>
