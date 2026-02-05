@@ -11,9 +11,9 @@ const projects = [
     alt: 'Больницы'
   },
   {
-    image_name: 'nursing_home.png',
-    title: 'Мартыновский ДИПИ',
-    alt: 'Мартыновский ДИПИ'
+    image_name: 'perspektiva.jpg',
+    title: 'Многофункциональные комплексы',
+    alt: 'Многофункциональные комплексы'
   }
 ];
 
@@ -39,7 +39,7 @@ function getImageUrl(fileName) {
             class="w-full h-64 object-cover"
           >
           <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-            <h3 class="text-2xl font-bold text-white">{{ project.title }}</h3>
+            <h3 class="text-2xl font-bold text-center text-white">{{ project.title }}</h3>
           </div>
         </div>
       </div>
