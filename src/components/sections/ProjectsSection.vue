@@ -17,8 +17,20 @@ const projects = [
   }
 ];
 
-function getImageUrl(fileName, fileExtension) {
-  return new URL(`../../assets/images/projects/${fileExtension}/${fileName}.${fileExtension}`, import.meta.url).href;
+const widths = [800, 1200];
+
+function getSrcset(fileName, fileExtension) {
+  return widths
+    .map(width => {
+      const url = new URL(`../../assets/images/projects/${fileExtension}/${fileName}-${width}.${fileExtension}`, import.meta.url).href;
+      return `${url} ${width}w`;
+    })
+    .join(', ');
+}
+
+function getFallbackUrl(fileName, fileExtension) {
+  // Возвращаем самый маленький вариант (800) для старых браузеров
+  return new URL(`../../assets/images/projects/${fileExtension}/${fileName}-800.${fileExtension}`, import.meta.url).href;
 }
 </script>
 
@@ -34,11 +46,23 @@ function getImageUrl(fileName, fileExtension) {
           class="relative overflow-hidden rounded-lg group"
         >
           <picture>
-            <source :srcset="getImageUrl(project.image_name, 'avif')" type="image/avif">
-            <source :srcset="getImageUrl(project.image_name, 'webp')" type="image/webp">
+            <!-- AVIF с srcset -->
+            <source 
+              :srcset="getSrcset(project.image_name, 'avif')" 
+              type="image/avif"
+              sizes="(max-width: 768px) 100vw, 400px"
+            >
+            <!-- WebP с srcset -->
+            <source 
+              :srcset="getSrcset(project.image_name, 'webp')" 
+              type="image/webp"
+              sizes="(max-width: 768px) 100vw, 400px"
+            >
+            <!-- JPG fallback (всегда 800px) -->
             <img
-              :src="getImageUrl(project.image_name, 'jpg')"
+              :src="getFallbackUrl(project.image_name, 'jpg')"
               :alt="project.alt"
+              loading="lazy"
               class="w-full h-64 object-cover"
             >
           </picture>
