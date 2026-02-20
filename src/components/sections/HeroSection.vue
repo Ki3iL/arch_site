@@ -1,9 +1,12 @@
 <template>
   <div class="relative bg-gray-900 text-white py-32">
     <div class="absolute inset-0">
-      <img src="/images/hero.avif" 
-          alt="Architecture" 
-          class="w-full h-full object-cover opacity-30">
+      <img 
+        src="/images/hero.avif" 
+        alt="Architecture" 
+        class="w-full h-full object-cover opacity-30"
+        fetchpriority="high"
+      >
     </div>
     <div class="relative max-w-7xl mx-auto px-4">
       <div class="flex items-center space-x-2 mb-6">
