@@ -2,17 +2,17 @@
 const projects = [
   {
     image_name: 'warehouses',
-    title: 'Склады',
-    alt: 'Склады'
+    title: 'Логистические\n центры',
+    alt: 'Логистические центры'
   },
   {
     image_name: 'nursing_home',
-    title: 'Больницы',
-    alt: 'Больницы'
+    title: 'Медицинские\n учреждения',
+    alt: 'Медицинские учреждения'
   },
   {
     image_name: 'perspektiva',
-    title: 'Многофункциональные комплексы',
+    title: 'Многофункциональные\n комплексы',
     alt: 'Многофункциональные комплексы'
   }
 ];
@@ -67,7 +67,7 @@ function getFallbackUrl(fileName, fileExtension) {
             >
           </picture>
           <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-            <h3 class="text-2xl font-bold text-center text-white">{{ project.title }}</h3>
+            <h3 class="text-2xl md:text-lg lg:text-2xl font-bold text-center text-white whitespace-pre-line">{{ project.title }}</h3>
           </div>
         </div>
       </div>
